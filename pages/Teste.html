@@ -70,7 +70,7 @@
     <meta name="author" content="Professor Edilson"/>
     <!--link rel="stylesheet" type="text/CSS" href="est.css"/-->
     <script type="text/javascritp" src="comport.js"></script>
-        <title>Página de Teste</title>
+        <title>Página de Cadastro de alunos</title>
         
   </head>
 
@@ -79,34 +79,40 @@
         <h1><b>Atenção:</b><h1><br/>
            <p>Seu navegador não está aceitando scripts. Configure-o para aceitar scripts ou utilize outro navegador.</p>
     </noscript>
-      <h1>Página de teste do Edilson!<h1><br/>
-      <h2>Criação de Formulário</h2>
+    <div style="background-color:#0000ff;"></br>
+      <h1 style="color:ffffff";><i>Seja bem vindo à esta página de cadastro!</i><h1><br/>
+     </div>
+      <span>As funcionalidades desta página ainda não estão ativas!</span>
+      </br></br>
      
-     <fieldset style="display: inline; text-align: left;">
+     <fieldset style="background-color:#ffff00;">
+     <!-- para deixar o fieldset em tamanho mínimo a esquerda, use o atributo style="display: inline; text-align: left;" dentro da tag fieldset -->
           
-          <legend>Dados Pessoais</legend>
+          <legend><b>IDENTIFICAÇÃO</b></legend>
               <form name="frmCAD" id="frmCAD" method="POST" action="cadastro.php" enctype="application/x-www-form-urlencoded">
               
               <label for="nome">Nome:</label>
               <input type="text" id="nome" name="nome" value="" size="40" maxlength="50" tabindex"1"/>
+              <label for="senha">Senha Fornecida na Sala de Aula:</label>
+              <input type="password" id="senha" name="senha" value="" size="20" maxlength="6" tabindex"2"/>
               <br/><br/>
               
               <label for="escola">Escola:</label>
-              <input type="text" id="escola" name="escola" value="" size="40" maxlength="60" tabindex"2"/>
+              <input type="text" id="escola" name="escola" value="" size="40" maxlength="60" tabindex"3"/>
               <br/><br/>
               <label for="email">Email:</label>
-              <input type="text" id="email" name="email" value="" size="40" maxlength="60" tabindex"3"/>
+              <input type="text" id="email" name="email" value="seuemail@exemplo.com.br" size="40" maxlength="60" tabindex"4"/>
               <br/><br/>
               <label for="fone">Telefone Celular:</label>
-              <input type="text" id="fone" name="fone" value="(37) 99999-9999" size="20" maxlength="15" tabindex"4"/>
+              <input type="text" id="fone" name="fone" value="(37) 99999-9999" size="20" maxlength="15" tabindex"5"/>
 
               <br/><br/>
               <label for="genero">Gênero:</label>
-              <input type="radio" id="masculino" name="genero" value="masculino" tabindex"5"/>Masculino &nbsp &nbsp &nbsp 
-              <input type="radio" id="feminino" name="genero" value="feminino" tabindex"6"/>Feminino
+              <input type="radio" id="masculino" name="genero" value="masculino" tabindex"6"/>Masculino &nbsp &nbsp &nbsp 
+              <input type="radio" id="feminino" name="genero" value="feminino" tabindex"7"/>Feminino
               <br/><br/>
-              <input type="reset" id="btnLimpar" name="btnLimpar" value="Limpar Dados" tabindex="7"/> &nbsp &nbsp
-              <input type="submit" id="btnEnviar" name="btnEnviar" value="Enviar Dados" tabindex="8" />
+              <input type="reset" id="btnLimpar" name="btnLimpar" value="Limpar Dados" tabindex="8"/> &nbsp &nbsp
+              <input type="submit" id="btnEnviar" name="btnEnviar" value="Enviar Dados" tabindex="9" />
                
               </form>
               <br/>
