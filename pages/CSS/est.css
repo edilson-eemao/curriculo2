@@ -11,14 +11,23 @@ body{
               border: 2px solid black;
               }
               
-h1{ color: #ffffff;}
+h1{ 
+   text-shadow: 0.1em 0.1em 0.2em black;
+  color: #ffffff;
+  font-family: times;
+  font-style: italic;
+  font-size: 36pt;
+}
 
-#form{
+#formulario{
   border: 2px solid black;
   padding-top: 5px;
   background-color: #ffff00;
+  font-weight: bold;
 }
 
 fieldset{
   border: none;
 }
+
+
