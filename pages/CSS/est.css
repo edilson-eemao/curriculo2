@@ -1,0 +1,24 @@
+@charset "utf-8";/*Documento CSS*/
+
+body{
+      font-family: arial, helvetica, verdana, sans-serif;
+      background-color:#87ceeb;
+}
+
+#cabecalho{
+              background-color: #0000ff;
+              text-align: center;
+              border: 2px solid black;
+              }
+              
+h1{ color: #ffffff;}
+
+#form{
+  border: 2px solid black;
+  padding-top: 5px;
+  background-color: #ffff00;
+}
+
+fieldset{
+  border: none;
+}
