@@ -2,11 +2,11 @@
 
 body{
       font-family: arial, helvetica, verdana, sans-serif;
-      background-color:#87ceeb;
+      background-color:#FAEBD7  ;/* 87ceeb*/
 }
 
 #cabecalho{
-              background-color: #0000ff;
+              background-color: #F08080;
               text-align: center;
               border: 2px solid black;
               }
@@ -22,7 +22,7 @@ h1{
 #formulario{
   border: 2px solid black;
   padding-top: 5px;
-  background-color: #ffff00;
+  background-color: #F08080;
   
 }
 
