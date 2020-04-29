@@ -1,33 +1,426 @@
 @charset "utf-8";/*Documento CSS*/
 
+/*Zerando valores dos elementos */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0;padding: 0;	border: 0;font-size: 100%;font: inherit;vertical-align: baseline;} article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;} body {line-height: 1;font-family:Arial,Helvetica,verdana,sans-serif;font-size:14px;} ol, ul {list-style: none;} blockquote, q {quotes: none;} blockquote:before, blockquote:after,q:before, q:after {content: '';	content: none;} table {border-collapse: collapse;border-spacing: 0;}
+/*Zerando valores dos elementos */
+
+/* ********************************** APLICAÇÃO GERAL *************************** */
+
 body{
-      font-family: arial, helvetica, verdana, sans-serif;
-      background-color:#FAEBD7  ;/* 87ceeb*/
+      --font-family: arial, helvetica, verdana, sans-serif;
+      ---background-color:#9bd0d4  ;/* 87ceeb*/
+	  background-image: url("images/p_fundo2.jpg");
+	  background-repeat: repeat;
+	  background-attachment: fixed;
+	  
 }
 
-#cabecalho{
-              background-color: #F08080;
-              text-align: center;
-              border: 2px solid black;
-              }
-              
-h1{ 
-   text-shadow: 0.1em 0.1em 0.2em black;
-  color: #ffffff;
-  font-family: times;
-  font-style: italic;
-  font-size: 36pt;
+
+#advertencia{
+	color: red;
+	font-weight: bold;
+	
 }
+
+div.banner{
+	clear: both;
+	width: 1200px;
+    height: 70px;
+	margin: 5px 0 0 10px;
+	padding: 5px;
+	background-image: url("images/matrix.gif");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+h1{ 
+  clear:both;
+  padding: 10px;
+  text-shadow: 0.1em 0.1em 0.2em green;
+  color: white; <!-- #8B0000 -->
+  font-family: verdana;
+  --font-style: italic;
+  font-size: 36pt;
+  text-align: center;
+}
+
+img{
+	display: block;
+	margin-left: auto; 
+	margin-right: auto;
+	}
+
+#destaque_top_esquerda .legenda{
+	clear: both;
+	font-style:italic; 
+	font-size:10px;
+	margin-top: 10px;
+	margin-left: 98px;
+	margin-bottom: 10px;
+}
+
+#destaque_top_direita .centro{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#destaque_top_direita .legenda{
+	clear: both;
+	font-style:italic; 
+	font-size:12px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 20px;
+}
+
+
+
+#eezb .centro{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#eezb p.tel_escolas, #eemao p.tel_escolas{text-indent: 0px; color: blue;}
+
+
+.legenda{
+	clear: both;
+	font-style:italic; 
+	font-size:12px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+p{
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	text-align: justify;
+	text-indent: 20px;
+	}
+
+.barrahorizontal{
+	clear: both;
+	margin-left: 2px;
+	margin-right: 53px;
+	background-color: #08899e;
+	height: 6px;
+}
+
+#cabecalho{}
+
+	#logotipo{
+		padding: 1px;
+		margin: 0;
+		}
+	#logotipo img{margin: 0;}
+	
+	#menu{
+		padding: 1px;
+		margin: 0;
+		}
+		
+		#menu ul{list-style-type: none;}
+
+		#menu ul li{
+		float: left;
+		display: block;
+		height: 20px;
+		margin-left: 1px;
+		width: 140px;
+		background-color: #e37222;
+		text-align: center;
+		padding: 5px;
+		
+		
+		}
+
+			#menu ul li:hover, #menu ul li a:hover{
+				background-color: #08899e;
+				color: #ffff00;
+				font-weight: bold;
+				
+			}
+
+
+			#menu ul li a{
+				text-decoration: none;
+				color: #FFFFF0;
+				padding-top: 3px;
+}
+
+
+			#menu ul li a:active{
+				color: #08899e;
+				
+			}
+
+
+
+             
+
+h2{ 
+  padding: 5px;
+  padding-left: 15px;
+  clear: both;
+  color: #ffffff;
+  background-color: #08899e;
+  font-family: verdana;
+  font-size: 14pt;
+  text-align: left;
+}
+
+h3{ 
+  padding: 4px;
+  margin-bottom: 10px;
+  clear: both;
+  color: #ffffff;
+  background-color: #65babf;
+  font-family: verdana;
+  font-size: 10pt;
+  text-align: left;
+}
+
+
+/* **************************************** follha de cadastro *******************************/
 
 #formulario{
-  border: 2px solid black;
-  padding-top: 5px;
-  background-color: #F08080;
+	color: #FFFFF0;
+	margin-left: 2px;
+	margin-right: 69px;
+	border: 2px solid black;
+	padding-top: 5px;
+	background-color: #65babf;
   
 }
 
 fieldset{
+	padding: 15px;
+	
+}
+
+#formulario .ident{
+	font-family: verdana;
+	font-size: 18pt;
+	color: #FFFF00;
+	padding: 15px;
+	font-weight: bold;
+}
+
+#formulario fieldset{
   border: none;
+  display: inline;
+  text-align: left;
+}
+
+input[type="text"]{   
+	border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    box-shadow: 1px 1px 2px #333333;    
+    -moz-box-shadow: 1px 1px 2px #333333;
+    -webkit-box-shadow: 1px 1px 2px #333333;
+    background: #FFFFF0; 
+    border:1px solid #000000;
+    width:250px
+}
+
+input[type="password"]{   
+	border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    box-shadow: 1px 1px 2px #333333;    
+    -moz-box-shadow: 1px 1px 2px #333333;
+    -webkit-box-shadow: 1px 1px 2px #333333;
+    background: #FFFFF0; 
+    border:1px solid #000000;
+    width:250px
 }
 
 
+
+input:focus, textarea:focus{ 
+         background: #FFFF00; border:1px solid #990000;
+}
+
+/* **************************************** Lista de Conteúdos ****************************** */
+
+#lista_videos{
+	margin-left: 15px;
+}
+
+	#tela_esq{
+	background-color: #bae1ea;
+	height: 430px;
+	overflow: auto;
+	width:45%;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-top: 0;
+	float:left;
+}
+
+	#tela_dir{
+	background-color: #bae1ea;
+	height: auto;	
+	width:49%;
+	float:left;
+	margin-left: 5px;
+}
+
+	#tela_dir .centro{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+	#tela_dir .legenda{
+	clear: both;
+	font-style:italic; 
+	font-size:12px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+		table{
+		background-color: #F5DEB3;
+		font-family: arial;
+		font-size: 12pt;
+		text-align: left;
+			}
+
+			#tela_esq th{
+			background-color: #08899e ; /*#F4A460*/
+			border: 2px solid;
+			border-color: #005533;
+			--padding: 5px;
+}
+
+			#tela_esq td{
+			--background-color: #F4A460;
+			border: 2px solid;
+			border-color: #005533;
+			padding: 10px;
+}
+
+
+			#tela_esq td:hover{
+			background-color: #40E0D0;
+}
+
+
+
+/* ***************************************** Página home ****************************** */
+pre {
+	background: #FEFFAF;
+	color: #000;
+	line-height: 18px;
+	margin-bottom: 18px;
+	padding: 1.5em;
+	margin-bottom:20px;
+	margin-top:20px;
+	border: #000 1px dotted;
+}
+
+#geral{
+	width:1260px;
+	--width:760px;
+	margin:0 auto;
+	text-align:left;/* "remédio" para o hack do IE */
+	--background-color: #FFFACD;
+}
+
+#corpo{
+	margin-top: 20px;
+	background-color: #9bd0d4;
+	}
+		
+		#destaque{margin-bottom: 20px;}
+		
+			#destaque_top{}
+			
+				#destaque_top_esquerda{
+					width: 47%;
+					float:left;
+					margin-left:20px;
+					background-color: #bae1ea;
+				}
+				
+				#destaque_top_direita{
+					width: 47%;
+					float:left;
+					margin-left:20px;
+					background-color: #bae1ea;
+				}
+				
+		#rodape{
+				clear: both;
+				background-color: #B0E0E6;
+				margin-left: 20px;
+				margin-right: 35px;
+			}
+			
+			#ondetrabalho h2{
+				padding: 5px;
+				margin-bottom: 10px;
+				margin-top: 20px;
+				clear: both;
+				--text-shadow: 0.1em 0.1em 0.2em black;
+				color: #ffffff;
+				background-color: #406db7;
+				font-family: verdana;
+				font-size: 14pt;
+				text-align: left;
+			}
+				
+				#eemao{
+					width:45%;
+					background-color:#f1f1ef;
+					padding:10px;
+					float:left;
+					margin-left: 20px;
+					text-align:center;
+					margin-bottom: 10px;
+				}
+				
+				#eezb{
+					width:45%;
+					background-color:#f1f1ef;
+					padding:10px;
+					float:left;
+					margin-left:20px;
+					margin-bottom:10px;
+				}
+
+
+		#direitos_reservados{
+		width:100%;
+		text-align:right;
+		color: white;
+		font-size:10px;
+		clear:both;
+		padding:10px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		background-color: #406db7
+		}
+
+/* ***************************************** Lista Exercícios ****************************** */
+#lista_baixar{
+					width:45%;
+					background-color:#f1f1ef;
+					padding:10px;
+					float:left;
+					margin-left:20px;
+					margin-bottom:10px;
+				}
