@@ -1,0 +1,96 @@
+<DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="página de teste para treinamento"/>
+    <meta name="keywords" content="edilson pitangui"/>
+    <meta name="author" content="Professor Edilson"/>
+    <link rel="stylesheet" type="text/CSS" href="CSS/est.css">
+    <script type="text/javascritp" src="comportamento.js"></script>
+        <title>Página de Cadastro de Alunos</title>
+        
+  </head>
+
+  <body>
+    <noscript  id="advertencia">
+        <h1><b>Atenção:</b><h1><br/>
+           <p>Seu navegador não está aceitando scripts. Configure-o para aceitar scripts ou utilize outro navegador.</p>
+    </noscript>
+	
+<div id="geral">	
+	<div id="cabecalho">
+            <div id="logotipo">
+                <a href="home.html">
+                <img src="images/logotipo.gif" title="Logotipo" alt="logotipo" border="0"/>
+                </a>
+            </div>
+            <div id="menu">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="cadastro.html">Registre-se</a></li>
+                    <li><a href="lista_de_conteudos.html">Video Aulas</a></li>
+                    <li><a href="lista_de_exercicios.html">Listas de Exercícios</a></li>
+                    <li><a href="aulas_em_slides.html">Aulas em Slides</a></li>
+                    <li><a href="provas_online.html">Provas Online</a></li>
+                    <li><a href="simulados.html">Simulados</a></li>
+					<li><a href="extra.html">Extra</a></li>
+                </ul>
+            </div>
+    </div>
+	<div class="barrahorizontal"></div>
+			<div class="banner">
+			<div><h1>Página de Cadastro! </h1></div>
+		</div>
+
+			
+      <span><marquee>ATENÇÃO: As funcionalidades desta página ainda não estão ativas!</marquee></span>
+      </br>
+
+
+<div id="formulario">     
+     <fieldset>
+     <!-- para deixar o fieldset em tamanho mínimo a esquerda, use o atributo style="display: inline; text-align: left;" dentro da tag fieldset -->
+          
+          <legend class="ident">IDENTIFICAÇÃO</legend>
+              <form name="frmCAD" id="frmCAD" method="POST" action="acao.php" enctype="application/x-www-form-urlencoded">
+              
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="nome" value="" size="40" maxlength="50" tabindex="1"/>
+              
+			  <label for="senha"> &nbsp Senha Fornecida na Sala de Aula:</label>
+              <input type="password" id="senha" name="senha" value="" size="20" maxlength="6" tabindex="2"/>
+              <br/><br/>
+              
+              <label>Escola:</label>
+              <input type="radio" id="EE Zico Barbosa" name="escola" value="EE Zico Barbosa" tabindex="3"/>EE ZICO BARBOSA &nbsp &nbsp &nbsp
+              <input type="radio" id="EE Monsenhor Artur de Oliveira" name="escola" value="EE Monsenhor Artur de Oliveira" tabindex="4"/>EE MONSENHOR ARTUR DE OLIVEIRA
+              <br/><br/>
+
+              <label for="email">Email:</label>
+              <input type="text" id="email" name="email" value="seuemail@exemplo.com.br" size="40" maxlength="60" tabindex="5"/>
+              <br/><br/>
+              <label for="fone">Telefone Celular:</label>
+              <input type="text" id="fone" name="fone" value="(37) 99999-9999" size="20" maxlength="15" tabindex="6"/>
+
+              <br/><br/>
+              <label>Sexo:</label>
+              <input type="radio" id="masculino" name="sexo" value="masculino" tabindex="7"/>Masculino &nbsp &nbsp &nbsp 
+              <input type="radio" id="feminino" name="sexo" value="feminino" tabindex="8"/>Feminino
+              <br/><br/>
+              <input type="reset" id="btnLimpar" name="btnLimpar" value="Limpar Dados" tabindex="9"/> &nbsp &nbsp
+              <input type="submit" id="btnEnviar" name="btnEnviar" value="Enviar Dados" tabindex="10" />
+              <br/> 
+              </form>
+              
+     </fieldset>
+     </div>
+	
+		<div id="rodape">	
+			<div id="direitos_reservados">
+				Professor Edilson | Matematicando | 2020 - 2020 | Todos os direitos reservados!
+			</div>
+		</div>
+	</div>
+  </body>
+</html>
