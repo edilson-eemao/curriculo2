@@ -1,100 +1,64 @@
-<!--DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"-->
+<DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
 
   <head>
-<style type="text/css">
-.inline {
-  background-color: #f7f7f7;
-  border:solid 1px #B0B0B0;
-}
-.error {
-	font-weight: bold;
-	color: #FF0000;
-}
-.warning {
-	font-weight: bold;
-}
-.message {
-	font-style: italic;
-}
-.source, .output, .warning, .error, .message {
-	padding: 0 1em;
-  border:solid 1px #F7F7F7;
-}
-.source {
-  background-color: #f5f5f5;
-}
-.left {
-  text-align: left;
-}
-.right {
-  text-align: right;
-}
-.center {
-  text-align: center;
-}
-.hl.num {
-  color: #AF0F91;
-}
-.hl.str {
-  color: #317ECC;
-}
-.hl.com {
-  color: #AD95AF;
-  font-style: italic;
-}
-.hl.opt {
-  color: #000000;
-}
-.hl.std {
-  color: #585858;
-}
-.hl.kwa {
-  color: #295F94;
-  font-weight: bold;
-}
-.hl.kwb {
-  color: #B05A65;
-}
-.hl.kwc {
-  color: #55aa55;
-}
-.hl.kwd {
-  color: #BC5A65;
-  font-weight: bold;
-}
-</style>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta name="description" content="página de teste para treinamento"/>
     <meta name="keywords" content="edilson pitangui"/>
     <meta name="author" content="Professor Edilson"/>
     <link rel="stylesheet" type="text/CSS" href="CSS/est.css">
-    <script type="text/javascritp" src="comport.js"></script>
-        <title>Página de Cadastro de alunos</title>
+    <script type="text/javascritp" src="comportamento.js"></script>
+        <title>Página de Cadastro de Alunos</title>
         
   </head>
 
   <body>
-    <noscript>
+    <noscript  id="advertencia">
         <h1><b>Atenção:</b><h1><br/>
            <p>Seu navegador não está aceitando scripts. Configure-o para aceitar scripts ou utilize outro navegador.</p>
     </noscript>
-    <div id="cabecalho">
-      <h1>Seja bem vindo à esta página de cadastro!<h1>
-     </div></br>
-      <span><marquee>As funcionalidades desta página ainda não estão ativas!</marquee></span>
-      </br></br>
+	
+<div id="geral">	
+	<div id="cabecalho">
+            <div id="logotipo">
+                <a href="home.html">
+                <img src="images/logotipo.gif" title="Logotipo" alt="logotipo" border="0"/>
+                </a>
+            </div>
+            <div id="menu">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="cadastro.html">Registre-se</a></li>
+                    <li><a href="lista_de_conteudos.html">Video Aulas</a></li>
+                    <li><a href="lista_de_exercicios.html">Listas de Exercícios</a></li>
+                    <li><a href="aulas_em_slides.html">Aulas em Slides</a></li>
+                    <li><a href="provas_online.html">Provas Online</a></li>
+                    <li><a href="simulados.html">Simulados</a></li>
+					<li><a href="extra.html">Extra</a></li>
+                </ul>
+            </div>
+    </div>
+	<div class="barrahorizontal"></div>
+			<div class="banner">
+			<div><h1>Página de Cadastro! </h1></div>
+		</div>
+
+			
+      <span><marquee>ATENÇÃO: As funcionalidades desta página ainda não estão ativas!</marquee></span>
+      </br>
+
 
 <div id="formulario">     
      <fieldset>
      <!-- para deixar o fieldset em tamanho mínimo a esquerda, use o atributo style="display: inline; text-align: left;" dentro da tag fieldset -->
           
-          <legend>IDENTIFICAÇÃO</legend>
-              <form name="frmCAD" id="frmCAD" method="POST" action="cadastro.php" enctype="application/x-www-form-urlencoded">
+          <legend class="ident">IDENTIFICAÇÃO</legend>
+              <form name="frmCAD" id="frmCAD" method="POST" action="acao.php" enctype="application/x-www-form-urlencoded">
               
               <label for="nome">Nome:</label>
               <input type="text" id="nome" name="nome" value="" size="40" maxlength="50" tabindex="1"/>
-              <label for="senha"> &nbsp Senha Fornecida na Sala de Aula:</label>
+              
+			  <label for="senha"> &nbsp Senha Fornecida na Sala de Aula:</label>
               <input type="password" id="senha" name="senha" value="" size="20" maxlength="6" tabindex="2"/>
               <br/><br/>
               
@@ -121,6 +85,12 @@
               
      </fieldset>
      </div>
-
+	
+		<div id="rodape">	
+			<div id="direitos_reservados">
+				Professor Edilson | Matematicando | 2020 - 2020 | Todos os direitos reservados!
+			</div>
+		</div>
+	</div>
   </body>
 </html>
