@@ -15,6 +15,10 @@ body{
 	  
 }
 
+div.padrao{background-color: #f1f1ef;
+			padding: 10px;
+			}
+
 
 #advertencia{
 	color: red;
@@ -24,9 +28,9 @@ body{
 
 div.banner{
 	clear: both;
-	width: 1200px;
-    height: 70px;
-	margin: 5px 0 0 10px;
+	width: 747px;
+    height: 60px;
+	margin: 5px 0 0 1px;    /* top nenhum nenhum left  */
 	padding: 5px;
 	background-image: url("images/matrix.gif");
 	background-repeat: no-repeat;
@@ -56,11 +60,12 @@ img{
 	font-style:italic; 
 	font-size:10px;
 	margin-top: 10px;
-	margin-left: 98px;
+	margin-left: 10px;
 	margin-bottom: 10px;
 }
 
 #destaque_top_direita .centro{
+	clear: both;
 	display: block;
     margin-left: auto;
     margin-right: auto;
@@ -71,7 +76,7 @@ img{
 #destaque_top_direita .legenda{
 	clear: both;
 	font-style:italic; 
-	font-size:12px;
+	font-size:10px;
 	margin-top: 10px;
 	margin-left: 10px;
 	margin-bottom: 20px;
@@ -88,7 +93,7 @@ img{
 #eezb p.tel_escolas, #eemao p.tel_escolas{text-indent: 0px; color: blue;}
 
 
-.legenda{
+span.legenda{
 	clear: both;
 	font-style:italic; 
 	font-size:12px;
@@ -108,8 +113,7 @@ p{
 
 .barrahorizontal{
 	clear: both;
-	margin-left: 2px;
-	margin-right: 53px;
+	margin: 5px 5px 0px 2px;		/* top right bottom left  */
 	background-color: #08899e;
 	height: 6px;
 }
@@ -119,6 +123,7 @@ p{
 	#logotipo{
 		padding: 1px;
 		margin: 0;
+		width: cover;
 		}
 	#logotipo img{margin: 0;}
 	
@@ -134,7 +139,7 @@ p{
 		display: block;
 		height: 20px;
 		margin-left: 1px;
-		width: 140px;
+		width: 97px;
 		background-color: #e37222;
 		text-align: center;
 		padding: 5px;
@@ -194,7 +199,7 @@ h3{
 #formulario{
 	color: #FFFFF0;
 	margin-left: 2px;
-	margin-right: 69px;
+	--margin-right: 69px;
 	border: 2px solid black;
 	padding-top: 5px;
 	background-color: #65babf;
@@ -333,41 +338,47 @@ pre {
 }
 
 #geral{
-	width:1260px;
-	--width:760px;
+	--width:1260px;
+	width:760px;
 	margin:0 auto;
 	text-align:left;/* "remédio" para o hack do IE */
 	--background-color: #FFFACD;
 }
 
 #corpo{
-	margin-top: 20px;
-	background-color: #9bd0d4;
+	margin-top: 10px;
+	--background-color: #9bd0d4;
 	}
 		
-		#destaque{margin-bottom: 20px;}
+		#destaque{--margin-bottom: 20px;}
 		
 			#destaque_top{}
 			
 				#destaque_top_esquerda{
-					width: 47%;
+					width: 720px;
 					float:left;
-					margin-left:20px;
-					background-color: #bae1ea;
+					padding:10px;
+					margin-left:10px;
+					--background-color: #bae1ea;
+					background-color:#b0e0e6;
+					text-align:center;
 				}
 				
 				#destaque_top_direita{
-					width: 47%;
+					width: 720px;
 					float:left;
-					margin-left:20px;
-					background-color: #bae1ea;
+					padding:10px;
+					margin-left:10px;
+					--background-color: #bae1ea;
+					background-color:#b0e0e6;
+					text-align:center;
 				}
 				
 		#rodape{
 				clear: both;
 				background-color: #B0E0E6;
-				margin-left: 20px;
-				margin-right: 35px;
+				margin-left: 10px;
+				margin-right: 10px;
 			}
 			
 			#ondetrabalho h2{
@@ -384,32 +395,33 @@ pre {
 			}
 				
 				#eemao{
-					width:45%;
+					width:700px;
 					background-color:#f1f1ef;
 					padding:10px;
 					float:left;
-					margin-left: 20px;
+					margin-left: 10px;
 					text-align:center;
-					margin-bottom: 10px;
+					--margin-bottom: 10px;
 				}
 				
 				#eezb{
-					width:45%;
+					width:700px;
 					background-color:#f1f1ef;
 					padding:10px;
 					float:left;
-					margin-left:20px;
-					margin-bottom:10px;
+					margin-left:10px;
+					--margin-bottom:10px;
 				}
 
 
 		#direitos_reservados{
-		width:100%;
+		width:720px;
 		text-align:right;
 		color: white;
 		font-size:10px;
 		clear:both;
 		padding:10px;
+		margin-right: 20px;
 		margin-top: 20px;
 		margin-bottom: 20px;
 		background-color: #406db7

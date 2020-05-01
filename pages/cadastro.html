@@ -30,11 +30,11 @@
                     <li><a href="home.html">Home</a></li>
                     <li><a href="cadastro.html">Registre-se</a></li>
                     <li><a href="lista_de_conteudos.html">Video Aulas</a></li>
-                    <li><a href="lista_de_exercicios.html">Listas de Exercícios</a></li>
-                    <li><a href="aulas_em_slides.html">Aulas em Slides</a></li>
+                    <li><a href="lista_de_exercicios.html">Atividades</a></li>
+                    <li><a href="aulas_em_slides.html">Slides</a></li>
                     <li><a href="provas_online.html">Provas Online</a></li>
                     <li><a href="simulados.html">Simulados</a></li>
-					<li><a href="extra.html">Extra</a></li>
+					<!-- <li><a href="extra.html">Extra</a></li> -->
                 </ul>
             </div>
     </div>
@@ -55,32 +55,57 @@
           <legend class="ident">IDENTIFICAÇÃO</legend>
               <form name="frmCAD" id="frmCAD" method="POST" action="acao.php" enctype="application/x-www-form-urlencoded">
               
-              <label for="nome">Nome:</label>
-              <input type="text" id="nome" name="nome" value="" size="40" maxlength="50" tabindex="1"/>
+					<label for="nome">Nome:</label>
+					<input type="text" id="nome" name="nome" value="" size="40" maxlength="50" tabindex="1"/>
+					<br/><br/>
               
-			  <label for="senha"> &nbsp Senha Fornecida na Sala de Aula:</label>
-              <input type="password" id="senha" name="senha" value="" size="20" maxlength="6" tabindex="2"/>
-              <br/><br/>
-              
-              <label>Escola:</label>
-              <input type="radio" id="EE Zico Barbosa" name="escola" value="EE Zico Barbosa" tabindex="3"/>EE ZICO BARBOSA &nbsp &nbsp &nbsp
-              <input type="radio" id="EE Monsenhor Artur de Oliveira" name="escola" value="EE Monsenhor Artur de Oliveira" tabindex="4"/>EE MONSENHOR ARTUR DE OLIVEIRA
-              <br/><br/>
+					
+					<label>Escola:</label>
+					<input type="radio" id="EE Zico Barbosa" name="escola" value="EE Zico Barbosa" tabindex="2"/>EE ZICO BARBOSA &nbsp &nbsp &nbsp
+					<input type="radio" id="EE Monsenhor Artur de Oliveira" name="escola" value="EE Monsenhor Artur de Oliveira" tabindex="3"/>EE MONSENHOR ARTUR DE OLIVEIRA
+					<br/><br/>
 
-              <label for="email">Email:</label>
-              <input type="text" id="email" name="email" value="seuemail@exemplo.com.br" size="40" maxlength="60" tabindex="5"/>
-              <br/><br/>
-              <label for="fone">Telefone Celular:</label>
-              <input type="text" id="fone" name="fone" value="(37) 99999-9999" size="20" maxlength="15" tabindex="6"/>
+					<label>Turma:</label>
+						<select name="turma" id="turma" tabindex="4"/>
+							<optgroup label="EEMAO">
+								<option value="1_ano_1">1º Ano A1</option>
+								<option value="1_ano_2">1º Ano A2</option>
+								<option value="2_ano_1">2º Ano A2</option>
+							</optgroup>
+							
+							<optgroup label="EEZB">
+								<option value="8_ano">8º Ano</option>
+								<option value="9_ano">9º Ano</option>
+								<option value="1_ano">1º Ano</option>
+								<option value="3_ano">3º Ano</option>
+							</optgroup>
+						</select>
+					
+					<br/><br/>
 
-              <br/><br/>
-              <label>Sexo:</label>
-              <input type="radio" id="masculino" name="sexo" value="masculino" tabindex="7"/>Masculino &nbsp &nbsp &nbsp 
-              <input type="radio" id="feminino" name="sexo" value="feminino" tabindex="8"/>Feminino
-              <br/><br/>
-              <input type="reset" id="btnLimpar" name="btnLimpar" value="Limpar Dados" tabindex="9"/> &nbsp &nbsp
-              <input type="submit" id="btnEnviar" name="btnEnviar" value="Enviar Dados" tabindex="10" />
-              <br/> 
+
+
+
+					<label for="email">Email:</label>
+					<input type="text" id="email" name="email" value="seuemail@exemplo.com.br" size="40" maxlength="60" tabindex="5"/>
+					<br/><br/>
+					<label for="fone">Telefone Celular:</label>
+					<input type="text" id="fone" name="fone" value="(37) 99999-9999" size="20" maxlength="15" tabindex="6"/>
+
+					<br/><br/>
+					<label>Sexo:</label>
+					<input type="radio" id="masculino" name="sexo" value="masculino" tabindex="7"/>Masculino &nbsp &nbsp &nbsp 
+					<input type="radio" id="feminino" name="sexo" value="feminino" tabindex="8"/>Feminino
+					<br/><br/>
+					
+					<label for="senha"> &nbsp Senha Fornecida na Sala de Aula:</label>
+					<input type="password" id="senha" name="senha" value="" size="20" maxlength="9" tabindex="8"/>
+					<br/><br/>
+				
+					
+					<input type="reset" id="btnLimpar" name="btnLimpar" value="Limpar Dados" tabindex="10"/> &nbsp &nbsp
+					<input type="submit" id="btnEnviar" name="btnEnviar" value="Enviar Dados" tabindex="11" />
+					<br/> 
               </form>
               
      </fieldset>
