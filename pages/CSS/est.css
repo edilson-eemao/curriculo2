@@ -15,6 +15,28 @@ body{
 	  
 }
 
+img.icone{
+	width: 20px;
+	--float: left;
+	margin-right: 10px;
+}
+
+span.negrito{font-weight: bold;
+			line-height: 1.3;
+			color: #08899e;
+}
+
+
+span.italico{font-style: italic;
+}
+
+
+li.espac{margin-bottom: 12pt; list-style-image: url("images/star.png");}
+
+ul#formacao{text-align: left;}
+
+.lista{text-align: left;}
+
 div.padrao{background-color: #f1f1ef;
 			padding: 10px;
 			}
@@ -298,7 +320,7 @@ input:focus, textarea:focus{
 }
 
 		table{
-		background-color: #F5DEB3;
+		--background-color: #F5DEB3;
 		font-family: arial;
 		font-size: 12pt;
 		text-align: left;
@@ -335,6 +357,12 @@ pre {
 	margin-bottom:20px;
 	margin-top:20px;
 	border: #000 1px dotted;
+}
+
+.lista {
+	margin: 5px 0 0 10px;
+	display: flex;
+	padding:
 }
 
 #geral{
