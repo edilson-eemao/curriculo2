@@ -6,9 +6,46 @@
     <meta name="description" content="página de teste para treinamento"/>
     <meta name="keywords" content="edilson pitangui"/>
     <meta name="author" content="Professor Edilson"/>
-    <link rel="stylesheet" type="text/CSS" href="CSS/est.css">
-    <script type="text/javascritp" src="comportamento.js"></script>
-        <title>Página de Cadastro de Alunos</title>
+	<meta name="viewport" content="widht=device-widht, initial-scale=1.0"/>    
+	<link rel="stylesheet" type="text/CSS" href="CSS/est.css" >
+	<!--link rel="stylesheet" type="text/CSS" href="CSS/bootstrap.min.css"-->
+	<script type="text/javascript" src="js/jquery-3.5.0.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/additional-methods.min.js"></script>
+    <script type="text/javascript" src="js/localization/messages_pt_BR.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mask.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-notify.min.js"></script>
+	
+        <title>Página de Registro de Alunos</title>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#fone").mask("(00) 0 0000-0000"),
+			$("#frmCAD").validate({
+				rules:{
+					nome:{
+						required: true,
+						maxlength: 100,
+						minlength: 10,
+						minWords: 2
+					},
+					escola:{required: true},
+					turma:{required: true},
+					email:{required: true, email: true},
+					fone:{required: true},
+					sexo:{required: true},
+					senha:{required: true}
+				},
+				submitHandler: function(form){
+					alert("Registro realizado com sucesso!");
+				},
+				validarFormulario(){
+					return true;
+				}
+			})
+		})
+	</script>
+
         
   </head>
 
@@ -20,12 +57,12 @@
 	
 <div id="geral">	
 	<div id="cabecalho">
-            <div id="logotipo">
+           <div id="logotipo">
                 <a href="home.html">
                 <img src="images/logotipo.gif" title="Logotipo" alt="logotipo" border="0"/>
                 </a>
-            </div>
-            <div id="menu">
+           </div>
+           <nav id="menu">
                 <ul>
                     <li><a href="home.html">Home</a></li>
                     <li><a href="cadastro.html">Registre-se</a></li>
@@ -36,86 +73,96 @@
                     <li><a href="simulados.html">Simulados</a></li>
 					<!-- <li><a href="extra.html">Extra</a></li> -->
                 </ul>
-            </div>
+           </nav>
+		<div class="barrahorizontal"></div>
+		<div class="banner">
+			<div><h1>Página de Registro! </h1></div>
+		</div>
+		
     </div>
-	<div class="barrahorizontal"></div>
-			<div class="banner">
-			<div><h1>Página de Cadastro! </h1></div>
-		</div>
-
-			
-      <span><marquee>ATENÇÃO: As funcionalidades desta página ainda não estão ativas!</marquee></span>
-      </br>
-
-
-<div id="formulario">     
-     <fieldset>
-     <!-- para deixar o fieldset em tamanho mínimo a esquerda, use o atributo style="display: inline; text-align: left;" dentro da tag fieldset -->
-          
-          <legend class="ident">IDENTIFICAÇÃO</legend>
-              <form name="frmCAD" id="frmCAD" method="POST" action="acao.php" enctype="application/x-www-form-urlencoded">
-              
-					<label for="nome">Nome:</label>
-					<input type="text" id="nome" name="nome" value="" size="40" maxlength="50" tabindex="1"/>
-					<br/><br/>
-              
-					
-					<label>Escola:</label>
-					<input type="radio" id="EE Zico Barbosa" name="escola" value="EE Zico Barbosa" tabindex="2"/>EE ZICO BARBOSA &nbsp &nbsp &nbsp
-					<input type="radio" id="EE Monsenhor Artur de Oliveira" name="escola" value="EE Monsenhor Artur de Oliveira" tabindex="3"/>EE MONSENHOR ARTUR DE OLIVEIRA
-					<br/><br/>
-
-					<label>Turma:</label>
-						<select name="turma" id="turma" tabindex="4"/>
-							<optgroup label="EEMAO">
-								<option value="1_ano_1">1º Ano A1</option>
-								<option value="1_ano_2">1º Ano A2</option>
-								<option value="2_ano_1">2º Ano A2</option>
-							</optgroup>
-							
-							<optgroup label="EEZB">
-								<option value="8_ano">8º Ano</option>
-								<option value="9_ano">9º Ano</option>
-								<option value="1_ano">1º Ano</option>
-								<option value="3_ano">3º Ano</option>
-							</optgroup>
-						</select>
-					
-					<br/><br/>
-
-
-
-
-					<label for="email">Email:</label>
-					<input type="text" id="email" name="email" value="seuemail@exemplo.com.br" size="40" maxlength="60" tabindex="5"/>
-					<br/><br/>
-					<label for="fone">Telefone Celular:</label>
-					<input type="text" id="fone" name="fone" value="(37) 99999-9999" size="20" maxlength="15" tabindex="6"/>
-
-					<br/><br/>
-					<label>Sexo:</label>
-					<input type="radio" id="masculino" name="sexo" value="masculino" tabindex="7"/>Masculino &nbsp &nbsp &nbsp 
-					<input type="radio" id="feminino" name="sexo" value="feminino" tabindex="8"/>Feminino
-					<br/><br/>
-					
-					<label for="senha"> &nbsp Senha Fornecida na Sala de Aula:</label>
-					<input type="password" id="senha" name="senha" value="" size="20" maxlength="9" tabindex="8"/>
-					<br/><br/>
-				
-					
-					<input type="reset" id="btnLimpar" name="btnLimpar" value="Limpar Dados" tabindex="10"/> &nbsp &nbsp
-					<input type="submit" id="btnEnviar" name="btnEnviar" value="Enviar Dados" tabindex="11" />
-					<br/> 
-              </form>
-              
-     </fieldset>
-     </div>
 	
+	<div id="corpo">
+		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+		<div class="formulario"> 
+
+			 <fieldset>
+			 <!-- para deixar o fieldset em tamanho mínimo a esquerda, use o atributo style="display: inline; text-align: left;" dentro da tag fieldset -->
+				  
+				  <legend class="ident">IDENTIFICAÇÃO (Em construção!!!!)</legend>
+				  <!-- div class="container" -->
+					  <form name="frmCAD" id="frmCAD" action="acao.php" method="POST" onSubmit="return validarFormulario()" >
+					   <!--  action="acao.php" onSubmit="return validarFormulario() enctype="application/x-www-form-urlencoded" -->
+							<div class="form-group">
+								<label for="nome">Nome:</label>
+								<input type="text" id="nome" name="nome" value="" class="form-control" tabindex="1"/>
+								<!-- size="40" maxlength="50"  -->
+							</div>
+							<div class="form-group">	
+								<label>Escola:</label>
+								<input type="radio" id="escola" name="escola" value="EE Zico Barbosa" class="form-control" tabindex="2" />EE ZICO BARBOSA &nbsp &nbsp &nbsp
+								<input type="radio" id="escola" name="escola" value="EE Monsenhor Artur de Oliveira" class="form-control" tabindex="3" />EE MONSENHOR ARTUR DE OLIVEIRA
+								
+							</div>
+							<div class="form-group">
+								<label>Turma:</label>
+									<select name="turma" id="turma" class="form-control" tabindex="4" />
+											<option value="">SELECIONE</option>
+										<optgroup label="EEMAO">
+											<option value="1_ano_1">1º Ano A1</option>
+											<option value="1_ano_2">1º Ano A2</option>
+											<option value="2_ano_1">2º Ano A2</option>
+										</optgroup>
+										
+										<optgroup label="EEZB">
+											<option value="8_ano">8º Ano</option>
+											<option value="9_ano">9º Ano</option>
+											<option value="1_ano">1º Ano</option>
+											<option value="3_ano">3º Ano</option>
+										</optgroup>
+									</select>
+							</div>
+								
+								
+							
+							<div class="form-group">
+								<label for="email">Email:</label>
+								<input type="text" id="email" name="email" value="" class="form-control" tabindex="5"/>
+								<br/><br/> <!-- size="40" maxlength="60"  -->
+							</div>
+							<div class="form-group">
+								<label for="fone">Telefone Celular:</label>
+								<input type="text" id="fone" name="fone" value=""  class="form-control" tabindex="6"/>
+							</div><!-- size="20" maxlength="15"  -->
+								
+							<div class="form-group">
+								<label>Sexo:</label>
+								<input type="radio" id="sexo" name="sexo" value="M" class="form-control" tabindex="7"/>Masculino &nbsp &nbsp &nbsp 
+								<input type="radio" id="sexo" name="sexo" value="F" class="form-control" tabindex="8"/>Feminino
+								
+							</div>
+							
+							<div class="form-group">
+								<label for="senha"> &nbsp Senha Fornecida na Sala de Aula:</label>
+								<input type="password" id="senha" name="senha" value="" class="form-control"  tabindex="9" &nbsp />
+								<!-- size="20" maxlength="9" -->
+							</div>
+								
+								
+								<input  class="btn btn-primary" type="reset" id="btnLimpar" name="btnLimpar" value="Limpar Dados" tabindex="11"/> &nbsp &nbsp
+								<button class="btn btn-primary" tabindex="10">Salvar e enviar</button>
+								<!--
+								<input type="submit" id="btnEnviar" name="btnEnviar" value="Enviar Dados"  class="form-control" tabindex="11" />
+								-->
+					  </form>
+					 <!-- /div --> 
+			 </fieldset>
+		</div> <!-- div formulario -->
+	</div> <!-- div corpo -->
+		
 		<div id="rodape">	
-			<div id="direitos_reservados">
-				Professor Edilson | Matematicando | 2020 - 2020 | Todos os direitos reservados!
-			</div>
+			<div id="direitos_reservados">Professor Edilson | Matematicando | 2020 - 2020 | Todos os direitos reservados!</div>
 		</div>
-	</div>
-  </body>
+</div> <!-- div geral-->
+
+</body>
 </html>
