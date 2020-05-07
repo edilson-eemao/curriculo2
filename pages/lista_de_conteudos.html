@@ -7,38 +7,16 @@
     <meta name="keywords" content="edilson pitangui"/>
     <meta name="author" content="Professor Edilson"/>
 	<meta name="viewport" content="widht=device-widht, initial-scale=1.0"/>
+	<script type="text/javascript" src="js/jquery-3.5.0.js"></script>
     <link rel="stylesheet" type="text/CSS" href="CSS/est.css" >
 	<title>Videoaulas</title>
     
-	<script type="text/javascript">
 	
-		function openCity(evt, cityName) {
-			  // Declaração das variáveis
-			  var i, tabcontent, tablinks;
-
-			  // Pega todos os elementos com a class="tabcontent" e as oculta
-			  tabcontent = document.getElementsByClassName("tabcontent");
-			  for (i = 0; i < tabcontent.length; i++) {
-				tabcontent[i].style.display = "none";
-			  }
-
-			  // Pega todos os elementos com a class="tablinks" e remove a classe "active"
-			  tablinks = document.getElementsByClassName("tablinks");
-			  for (i = 0; i < tablinks.length; i++) {
-				tablinks[i].className = tablinks[i].className.replace("active", "");
-			  }
-
-			  // Show the current tab, and add an "active" class to the link that opened the tab
-			  document.getElementById(cityName).style.display = "block";
-			  evt.currentTarget.className += "active";
-			}
-		
-	</script>
 	
 </head>
 	  <body>
 	<div id="geral">
-	  <!-- **************************************************************CABEÇALHO INÍCIO -->
+	  <!-- *************************************************************CABEÇALHO INÍCIO -->
 	   <div id="cabecalho">
             <div id="logotipo">
                 <a href="home.html">
@@ -69,7 +47,7 @@
 		<div class="corpo">
 			<div id="videos">
 				<div class="tab">
-					<button class="tablinks" onclick="openCity(event, 'apresentacao')">Sobre as videoaulas</button>
+					<button id="defaultOpen" class="tablinks" onclick="openCity(event, 'apresentacao')">Sobre as videoaulas</button>
 					<button class="tablinks" onclick="openCity(event, 'conj_conceitos')">Conjuntos: conceitos gerais</button>
 					<button class="tablinks" onclick="openCity(event, 'conj_numericos')">Conjuntos numéricos</button>
 					<button class="tablinks" onclick="openCity(event, 'func_geral')">Funções: conceitos gerais</button>
@@ -108,5 +86,32 @@
 		
 		
 	</div>
+	
+	<script type="text/javascript">
+	function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the link that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+		
+	</script>
+	
 	  </body>
 </html>
