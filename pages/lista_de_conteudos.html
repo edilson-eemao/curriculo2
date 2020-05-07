@@ -6,10 +6,12 @@
     <meta name="description" content="página de teste para treinamento"/>
     <meta name="keywords" content="edilson pitangui"/>
     <meta name="author" content="Professor Edilson"/>
+	<meta name="viewport" content="widht=device-widht, initial-scale=1.0"/>
     <link rel="stylesheet" type="text/CSS" href="CSS/est.css" >
-	<title>testes de javascript</title>
+	<title>Videoaulas</title>
     
 	<script type="text/javascript">
+	
 		function openCity(evt, cityName) {
 			  // Declaração das variáveis
 			  var i, tabcontent, tablinks;
@@ -30,6 +32,7 @@
 			  document.getElementById(cityName).style.display = "block";
 			  evt.currentTarget.className += "active";
 			}
+		
 	</script>
 	
 </head>
@@ -46,7 +49,7 @@
                 <ul>
                     <li><a href="home.html">Home</a></li>
                     <li><a href="cadastro.html">Registre-se</a></li>
-                    <li><a href="lista_de_conteudos.html">Video Aulas</a></li>
+                    <li><a href="lista_de_conteudos.html">Videoaulas</a></li>
                     <li><a href="lista_de_exercicios.html">Atividades</a></li>
                     <li><a href="aulas_em_slides.html">Slides</a></li>
                     <li><a href="provas_online.html">Provas Online</a></li>
@@ -56,7 +59,7 @@
             </div>
 			<div class="barrahorizontal"></div>
 			<div class="banner">
-				<div><h1>Teste para página de videos</h1></div>
+				<div><h1>Videoaulas</h1></div>
 			</div>
 			
 		</div>
@@ -64,31 +67,33 @@
 	  
 	  <!-- *****************************************************************CABEÇALHO FIM -->
 		<div class="corpo">
-			<div class="tab">
-				<button class="tablinks" onclick="openCity(event, 'apresentacao')">Sobre as videoaulas</button>
-				<button class="tablinks" onclick="openCity(event, 'conj_conceitos')">Conjuntos: conceitos gerais</button>
-				<button class="tablinks" onclick="openCity(event, 'conj_numericos')">Conjuntos numéricos</button>
-				<button class="tablinks" onclick="openCity(event, 'func_geral')">Funções: conceitos gerais</button>
-			</div>
-			
-			<div id="apresentacao" class="tabcontent">
-			  <h3>Sobre as videoaulas</h3>
-			  <iframe width="560" height="315" src="https://www.youtube.com/embed/gfQ6KqclmAs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</div>
-			
-			<div id="conj_conceitos" class="tabcontent">
-			  <h3>Conjuntos: conceitos gerais</h3>
-			  <iframe width="560" height="315" src="https://www.youtube.com/embed/79oH6jsIJ0k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</div>
+			<div id="videos">
+				<div class="tab">
+					<button class="tablinks" onclick="openCity(event, 'apresentacao')">Sobre as videoaulas</button>
+					<button class="tablinks" onclick="openCity(event, 'conj_conceitos')">Conjuntos: conceitos gerais</button>
+					<button class="tablinks" onclick="openCity(event, 'conj_numericos')">Conjuntos numéricos</button>
+					<button class="tablinks" onclick="openCity(event, 'func_geral')">Funções: conceitos gerais</button>
+				</div>
+				
+				<div id="apresentacao" class="tabcontent">
+				  <h3>Sobre as videoaulas</h3>
+				  <iframe width="560" height="315" src="https://www.youtube.com/embed/gfQ6KqclmAs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				
+				<div id="conj_conceitos" class="tabcontent">
+				  <h3>Conjuntos: conceitos gerais</h3>
+				  <iframe width="560" height="315" src="https://www.youtube.com/embed/79oH6jsIJ0k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
 
-			<div id="conj_numericos" class="tabcontent">
-			  <h3>Conjuntos numéricos</h3>
-			  <iframe width="560" height="315" src="https://www.youtube.com/embed/NDetIn-HvDs" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</div>
+				<div id="conj_numericos" class="tabcontent">
+				  <h3>Conjuntos numéricos</h3>
+				  <iframe width="560" height="315" src="https://www.youtube.com/embed/NDetIn-HvDs" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
 
-			<div id="func_geral" class="tabcontent">
-			  <h3>Funções: conceitos gerais</h3>
-			  <p>Este vídeo ainda não está disponível.</p>
+				<div id="func_geral" class="tabcontent">
+				  <h3>Funções: conceitos gerais</h3>
+				  <p>Este vídeo ainda não está disponível.</p>
+				</div>
 			</div>
 		</div>
 		
