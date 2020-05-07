@@ -6,6 +6,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 /* ********************************** APLICAÇÃO GERAL *************************** */
 
+*{margin: 0;}
+
 body{
       --font-family: arial, helvetica, verdana, sans-serif;
       ---background-color:#9bd0d4  ;/* 87ceeb*/
@@ -50,10 +52,10 @@ div.padrao{background-color: #f1f1ef;
 
 div.banner{
 	clear: both;
-	width: 747px;
-    height: 60px;
+	width: 755px;
+    height: 50px;
 	margin: 5px 0 0 1px;    /* top nenhum nenhum left  */
-	padding: 5px;
+	padding-bottom: 10px;
 	background-image: url("images/matrix.gif");
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -68,6 +70,16 @@ h1{
   font-family: verdana;
   --font-style: italic;
   font-size: 36pt;
+  text-align: center;
+}
+
+.banner h1{ 
+  clear:both;
+  padding: 10px;
+  text-shadow: 0.1em 0.1em 0.2em green;
+  color: white;
+  font-family: verdana;
+  font-size: 24pt;
   text-align: center;
 }
 
@@ -135,12 +147,12 @@ p{
 
 .barrahorizontal{
 	clear: both;
-	margin: 5px 5px 0px 2px;		/* top right bottom left  */
+	margin: 25px 5px 0px 2px;		/* top right bottom left  */
 	background-color: #08899e;
 	height: 6px;
 }
 
-#cabecalho{}
+#cabecalho{--position: fixed;}
 
 	#logotipo{
 		padding: 1px;
@@ -159,12 +171,12 @@ p{
 		#menu ul li{
 		float: left;
 		display: block;
-		height: 20px;
+		height: 50px;
 		margin-left: 1px;
-		width: 97px;
+		width: 107px;
 		background-color: #e37222;
 		text-align: center;
-		padding: 5px;
+		padding: 10px;
 		
 		
 		}
@@ -183,15 +195,6 @@ p{
 				padding-top: 3px;
 }
 
-
-			#menu ul li a:active{
-				color: #08899e;
-				
-			}
-
-
-
-             
 
 h2{ 
   padding: 5px;
@@ -217,23 +220,26 @@ h3{
 
 
 /* **************************************** follha de cadastro *******************************/
-
-#formulario{
+.formulario{
+	width:750px;
 	color: #FFFFF0;
 	margin-left: 2px;
-	--margin-right: 69px;
+	--margin-top: 220px;
 	border: 2px solid black;
 	padding-top: 5px;
 	background-color: #65babf;
   
 }
 
+.form-group{margin-bottom: 20px;}
+.form-control{margin-right: 20px;}
+
 fieldset{
 	padding: 15px;
 	
 }
 
-#formulario .ident{
+.formulario .ident{
 	font-family: verdana;
 	font-size: 18pt;
 	color: #FFFF00;
@@ -241,13 +247,14 @@ fieldset{
 	font-weight: bold;
 }
 
-#formulario fieldset{
+.formulario fieldset{
   border: none;
   display: inline;
   text-align: left;
 }
 
 input[type="text"]{   
+	height: 30px;
 	border-radius:4px;
     -moz-border-radius:4px;
     -webkit-border-radius:4px;
@@ -259,7 +266,8 @@ input[type="text"]{
     width:250px
 }
 
-input[type="password"]{   
+input[type="password"]{
+		height: 30px;
 	border-radius:4px;
     -moz-border-radius:4px;
     -webkit-border-radius:4px;
@@ -288,6 +296,7 @@ input:focus, textarea:focus{
 	height: 430px;
 	overflow: auto;
 	width:45%;
+	--margin-top: 220px;
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-bottom: 10px;
@@ -299,6 +308,7 @@ input:focus, textarea:focus{
 	background-color: #bae1ea;
 	height: auto;	
 	width:49%;
+	--margin-top: 220px;
 	float:left;
 	margin-left: 5px;
 }
@@ -366,26 +376,18 @@ pre {
 }
 
 #geral{
-	--width:1260px;
 	width:760px;
 	margin:0 auto;
 	text-align:left;/* "remédio" para o hack do IE */
-	--background-color: #FFFACD;
 }
 
-#corpo{
-	margin-top: 10px;
-	--background-color: #9bd0d4;
-	}
-		
-		#destaque{--margin-bottom: 20px;}
-		
-			#destaque_top{}
-			
+#corpo{	}
+				
 				#destaque_top_esquerda{
-					width: 720px;
+					width: 740px;
 					float:left;
 					padding:10px;
+					--margin-top: 220px;
 					margin-left:10px;
 					--background-color: #bae1ea;
 					background-color:#b0e0e6;
@@ -393,7 +395,7 @@ pre {
 				}
 				
 				#destaque_top_direita{
-					width: 720px;
+					width: 740px;
 					float:left;
 					padding:10px;
 					margin-left:10px;
@@ -404,6 +406,7 @@ pre {
 				
 		#rodape{
 				clear: both;
+				width: 750px;
 				background-color: #B0E0E6;
 				margin-left: 10px;
 				margin-right: 10px;
@@ -423,7 +426,7 @@ pre {
 			}
 				
 				#eemao{
-					width:700px;
+					width:720px;
 					background-color:#f1f1ef;
 					padding:10px;
 					float:left;
@@ -433,7 +436,7 @@ pre {
 				}
 				
 				#eezb{
-					width:700px;
+					width:720px;
 					background-color:#f1f1ef;
 					padding:10px;
 					float:left;
@@ -443,7 +446,7 @@ pre {
 
 
 		#direitos_reservados{
-		width:720px;
+		width:750px;
 		text-align:right;
 		color: white;
 		font-size:10px;
@@ -463,4 +466,89 @@ pre {
 					float:left;
 					margin-left:20px;
 					margin-bottom:10px;
+					--margin-top: 220px;
 				}
+
+/* ***************************************** Lista Videos ****************************** */
+
+* {box-sizing: border-box}
+
+/* Style the tab */
+
+.corpo #videos {
+	height: 470px;
+	
+}
+
+#tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 25%;
+  height: 350px;
+  overflow: auto;
+  --margin-top: 220px;
+}
+
+/* Style the buttons that are used to open the tab content */
+#tab button {
+  display: block;
+  background-color: inherit;
+  color: #406db7;
+  font-weight: bold;
+  padding: 10px 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+#tab button:hover {
+  background-color: #ddd;
+  --cursor: pointer;
+}
+
+/* Create an active/current "tab button" class */
+#tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 75%;
+  border-left: none;
+  height: 430px;
+  --margin-top: 220px;
+}
+
+.tabcontent h3{
+	padding: 4px;
+  margin-bottom: 10px;
+  clear: both;
+  color: #ffffff;
+  background-color: #65babf;
+  font-family: verdana;
+  font-size: 10pt;
+  text-align: left;
+}
+
+#opcoes div{display: none;}
+
+
+/* --------------------- botão salvar azul ----------------------- */
+
+.btn{display:inline-block;font-weight:400;color:#212529;text-align:center;vertical-align:middle;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-color:transparent;border:1px solid transparent;padding:.375rem .75rem;font-size:1rem;line-height:1.5;border-radius:.25rem;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out}@media (prefers-reduced-motion:reduce){.btn{transition:none}}.btn:hover{color:#212529;text-decoration:none}.btn.focus,.btn:focus{outline:0;box-shadow:0 0 0 .2rem rgba(0,123,255,.25)}.btn.disabled,.btn:disabled{opacity:.65}a.btn.disabled,fieldset:disabled a.btn{pointer-events:none}
+
+.btn-primary{color:#fff;background-color:#007bff;border-color:#007bff}
+.btn-primary:hover{color:#fff;background-color:#0069d9;border-color:#0062cc}
+.btn-primary.focus,.btn-primary:focus{color:#fff;background-color:#0069d9;border-color:#0062cc;box-shadow:0 0 0 .2rem rgba(38,143,255,.5)}
+.btn-primary.disabled,.btn-primary:disabled{color:#fff;background-color:#007bff;border-color:#007bff}
+.btn-primary:not(:disabled):not(.disabled).active,.btn-primary:not(:disabled):not(.disabled):active,.show>
+.btn-primary.dropdown-toggle{color:#fff;background-color:#0062cc;border-color:#005cbf}
+.btn-primary:not(:disabled):not(.disabled).active:focus,.btn-primary:not(:disabled):not(.disabled):active:focus,.show>

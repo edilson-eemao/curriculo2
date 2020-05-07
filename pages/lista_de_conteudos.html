@@ -1,4 +1,4 @@
-<DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"-->
 <html  xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
 
   <head>
@@ -6,21 +6,40 @@
     <meta name="description" content="página de teste para treinamento"/>
     <meta name="keywords" content="edilson pitangui"/>
     <meta name="author" content="Professor Edilson"/>
-    <link rel="stylesheet" type="text/CSS" href="CSS/est.css">
-    <script type="text/javascritp" src="comport.js"></script>
-        <title>Lista de Conteúdos</title>
-        
-  </head>
-
-  <body>
-    <noscript  id="advertencia">
-        <h1><b>Atenção:</b><h1><br/>
-           <p>Seu navegador não está aceitando scripts. Configure-o para aceitar scripts ou utilize outro navegador.</p>
-    </noscript>
+	<meta name="viewport" content="widht=device-widht, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/CSS" href="CSS/est.css" >
+	<title>Videoaulas</title>
+    
+	<script type="text/javascript">
 	
+		function openCity(evt, cityName) {
+			  // Declaração das variáveis
+			  var i, tabcontent, tablinks;
 
-	<div id="geral">	
-	<div id="cabecalho">
+			  // Pega todos os elementos com a class="tabcontent" e as oculta
+			  tabcontent = document.getElementsByClassName("tabcontent");
+			  for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			  }
+
+			  // Pega todos os elementos com a class="tablinks" e remove a classe "active"
+			  tablinks = document.getElementsByClassName("tablinks");
+			  for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace("active", "");
+			  }
+
+			  // Show the current tab, and add an "active" class to the link that opened the tab
+			  document.getElementById(cityName).style.display = "block";
+			  evt.currentTarget.className += "active";
+			}
+		
+	</script>
+	
+</head>
+	  <body>
+	<div id="geral">
+	  <!-- **************************************************************CABEÇALHO INÍCIO -->
+	   <div id="cabecalho">
             <div id="logotipo">
                 <a href="home.html">
                 <img src="images/logotipo.gif" title="Logotipo" alt="logotipo" border="0"/>
@@ -30,7 +49,7 @@
                 <ul>
                     <li><a href="home.html">Home</a></li>
                     <li><a href="cadastro.html">Registre-se</a></li>
-                    <li><a href="lista_de_conteudos.html">Video Aulas</a></li>
+                    <li><a href="lista_de_conteudos.html">Videoaulas</a></li>
                     <li><a href="lista_de_exercicios.html">Atividades</a></li>
                     <li><a href="aulas_em_slides.html">Slides</a></li>
                     <li><a href="provas_online.html">Provas Online</a></li>
@@ -38,143 +57,56 @@
 					<!-- <li><a href="extra.html">Extra</a></li> -->
                 </ul>
             </div>
-    </div>
-	<div class="barrahorizontal"></div>
+			<div class="barrahorizontal"></div>
 			<div class="banner">
-			<div><h1>Video Aulas</h1></div>
-		</div>
-
+				<div><h1>Videoaulas</h1></div>
+			</div>
 			
-      
-      </br>
-	  
-<!-- PARTE ESPECÍFICA -->
-
-<div id="lista_videos">
-		<div id="tela_esq">
-
-			<table summary="Lista de Conteúdos">
-			<thead>
-				<tr>
-					<th><h2>Conteúdos</h2></th>
-				</tr>
-				<tr>
-					<td> 
-						<!--a href="http://calculando2016.blogspot.com.br/p/blog-page_20.html" target="_blank">Equações de 2º grau e Sistemas</a-->
-						Equações do segundo grau com uma incógnita, resolução de equações do 2º grau, estudando as raízes de equação do 2º grau (delta), sistemas de duas equações com duas incógnitas.
-					</td>
-	
-				</tr>
-				<tr>
-					<td> 
-						<!--a href="http://calculando2016.blogspot.com.br/p/blog-page_24.html" target="_blank">Função Afim</a-->
-						Definição, casos particulares, gráficos, inclinação da reta, estudo de sinal, interceptos e exercícios.
-					</td>
-
-				</tr>
-				<tr>
-					<td>
-						Função Modular: 
-						Módulos, definições, gráficos, equações modulares e exercícios.
-					</td>
-
-				</tr>
-				<tr>
-					<td> 
-						<!--a href="http://calculando2016.blogspot.com.br/p/a-funcao-exponencial.html" target="_blank">Função Exponencial</a-->
-						Potência de expoente natural, potência de expoente inteiro negativo, potência de expoente racional, função exponencial, equação exponencial
-					</td>
-	
-				</tr>
-				<tr>
-					<td> 
-						<!--a href="http://calculando2016.blogspot.com.br/p/funcao-logaritmica.html" target="_blank">Função Logarítmica</a-->
-						Definição, propriedades decorridas da definição, sistemas de logaritmos, propriedades operatórias, equações logarítmicas, a função logarítmica
-					</td>
-
-				</tr>
-				<tr>
-					<td>
-						<!--a href="http://calculando2016.blogspot.com.br/p/blog-page_76.html" target="_blank">Função Quadrática</a-->
-						Definição, raízes da função, gráficos, coordenadas do vértice, interceptos e exercícios
-					</td>
-	
-				</tr>
-				<tr>
-					<td> 
-						<!--a href="http://calculando2016.blogspot.com.br/p/fundamentos-para-estudo-de-funcoes.html" target="_blank">Fundamentos para estudo de funções</a-->
-						Intervalos reais, união e intersecção de intervalos reais
-					</td>
-
-				</tr>
-				<tr>
-					<td>
-						<!--a href="http://calculando2016.blogspot.com.br/p/matematica-financeira.html" target="_blank">Matemática Financeira I</a-->
-						Porcentagem, acréscimo, desconto, juro simples, juro composto
-					</td>
-
-				</tr>
-				<tr>
-					<td> 
-						<!--a href="https://calculando2016.blogspot.com/p/matrizes.html">Matrizes</a-->
-						Introdução, definições, representações, matrizes especiais;igualdade entre matrizes, operações entre matrizes e matriz inversa
-					</td>
-
-				</tr>
-				<tr>
-					<td> 
-						<!--a href="http://calculando2016.blogspot.com.br/p/radiciacao.html" target="_blank">Radiciação</a-->
-						Potências com expoente fracionário, Propriedades dos radicais, Simplificação dos radicais, Operações com radicais
-					</td>
-
-				</tr>
-				<tr>
-					<td>	
-						<!--a href="http://calculando2016.blogspot.com.br/p/semelhancas.html" target="_blank">Semelhanças</a-->
-						Segmentos proporcionais, Teorema de Tales, semelhança de triângulos, exercícios 
-					</td>
-
-				</tr>
-				<tr>
-					<td>
-						<!--a href="http://calculando2016.blogspot.com.br/p/sistemas-lineares.html" target="_blank">Sistemas Lineares</a-->
-						Equações Lineares, Sistema de Equações Lineares, Solução de um Sistema Linear, Classificação de um Sistema Linear, Sistemas Lineares Homogêneos, Sistemas Escalonados, Escalonamento de um Sistema Linear, Matrizes Associadas a um Sistema, Determinantes 2x2, Determinantes 3x3 e Regra de Cramer
-					</td>
-
-				</tr>
-				<tr>
-					<td>
-						<!--a href="http://calculando2016.blogspot.com.br/p/sistemas-de-duas-equacoes.html" target="_blank">Sistema de duas Equações e Duas Incónitas</a-->
-						Método da Adição, Método da Substituição e Método da Comparação	
-					</td>
-
-				</tr>
-				<tr>
-					<td> 
-						<!--a href="http://calculando2016.blogspot.com.br/p/razoes.html" target="_blank">Trigonometria no Triângulo Retângulo</a-->
-						O triângulo retângulo, O teorema de Pitágoras, Razões Trigonométricas: seno, cosseno e tangente
-					</td>
-				</tr>
-			</table></br>
-
-		</div>	
-
-		<div id="tela_dir">
-		<h2>Escolha o conteúdo e assista ao video:</h2>
-                    <iframe class="centro" width="357" height="200" src="https://www.youtube.com/embed/NDetIn-HvDs" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <span class="legenda">Vídeo: Sequências e Sequências numéricas.</span>
-					<h2>Sempre faça exercícios em seu caderno!</h2>
 		</div>
-</div>	
-<!-- PARTE ESPECÍFICA -->
+       
+	  
+	  <!-- *****************************************************************CABEÇALHO FIM -->
+		<div class="corpo">
+			<div id="videos">
+				<div class="tab">
+					<button class="tablinks" onclick="openCity(event, 'apresentacao')">Sobre as videoaulas</button>
+					<button class="tablinks" onclick="openCity(event, 'conj_conceitos')">Conjuntos: conceitos gerais</button>
+					<button class="tablinks" onclick="openCity(event, 'conj_numericos')">Conjuntos numéricos</button>
+					<button class="tablinks" onclick="openCity(event, 'func_geral')">Funções: conceitos gerais</button>
+				</div>
+				
+				<div id="apresentacao" class="tabcontent">
+				  <h3>Sobre as videoaulas</h3>
+				  <iframe width="560" height="315" src="https://www.youtube.com/embed/gfQ6KqclmAs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				
+				<div id="conj_conceitos" class="tabcontent">
+				  <h3>Conjuntos: conceitos gerais</h3>
+				  <iframe width="560" height="315" src="https://www.youtube.com/embed/79oH6jsIJ0k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
 
+				<div id="conj_numericos" class="tabcontent">
+				  <h3>Conjuntos numéricos</h3>
+				  <iframe width="560" height="315" src="https://www.youtube.com/embed/NDetIn-HvDs" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+
+				<div id="func_geral" class="tabcontent">
+				  <h3>Funções: conceitos gerais</h3>
+				  <p>Este vídeo ainda não está disponível.</p>
+				</div>
+			</div>
+		</div>
+		
+		
+		
 		<div id="rodape">	
 			<div id="direitos_reservados">
 				Professor Edilson | Matematicando | 2020 - 2020 | Todos os direitos reservados!
 			</div>
 		</div>
-
-
+		
+		
+		
 	</div>
-  </body>
+	  </body>
 </html>
