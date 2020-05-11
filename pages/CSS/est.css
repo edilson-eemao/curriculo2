@@ -6,11 +6,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 /* ********************************** APLICAÇÃO GERAL *************************** */
 
-*{margin: 0;}
+*{margin: 0; padding:o;}
 
 body{
-      --font-family: arial, helvetica, verdana, sans-serif;
-      ---background-color:#9bd0d4  ;/* 87ceeb*/
 	  background-image: url("images/p_fundo2.jpg");
 	  background-repeat: repeat;
 	  background-attachment: fixed;
@@ -19,7 +17,6 @@ body{
 
 img.icone{
 	width: 20px;
-	--float: left;
 	margin-right: 10px;
 }
 
@@ -40,7 +37,7 @@ ul#formacao{text-align: left;}
 .lista{text-align: left;}
 
 div.padrao{background-color: #f1f1ef;
-			padding: 10px;
+			padding: 2px;
 			}
 
 
@@ -52,9 +49,9 @@ div.padrao{background-color: #f1f1ef;
 
 div.banner{
 	clear: both;
-	width: 755px;
+	width: 760px;
     height: 50px;
-	margin: 5px 0 0 1px;    /* top nenhum nenhum left  */
+	margin: 2px 0 0 0px;    /* top nenhum nenhum left  */
 	padding-bottom: 10px;
 	background-image: url("images/matrix.gif");
 	background-repeat: no-repeat;
@@ -63,10 +60,10 @@ div.banner{
 }
 
 h1{ 
-  clear:both;
+  clear: both;
   padding: 10px;
   text-shadow: 0.1em 0.1em 0.2em green;
-  color: white; <!-- #8B0000 -->
+  color: white;
   font-family: verdana;
   --font-style: italic;
   font-size: 36pt;
@@ -75,6 +72,7 @@ h1{
 
 .banner h1{ 
   clear:both;
+  z-index: -1;
   padding: 10px;
   text-shadow: 0.1em 0.1em 0.2em green;
   color: white;
@@ -145,14 +143,8 @@ p{
 	text-indent: 20px;
 	}
 
-.barrahorizontal{
-	clear: both;
-	margin: 25px 5px 0px 2px;		/* top right bottom left  */
-	background-color: #08899e;
-	height: 6px;
-}
 
-#cabecalho{--position: fixed;}
+#cabecalho{}
 
 	#logotipo{
 		padding: 1px;
@@ -161,40 +153,124 @@ p{
 		}
 	#logotipo img{margin: 0;}
 	
-	#menu{
-		padding: 1px;
-		margin: 0;
-		}
-		
-		#menu ul{list-style-type: none;}
+/* ---------------------------------- MENU PRINCIPAL ----------- */
 
-		#menu ul li{
-		float: left;
-		display: block;
-		height: 50px;
-		margin-left: 1px;
-		width: 107px;
-		background-color: #e37222;
-		text-align: center;
-		padding: 10px;
-		
-		
-		}
-
-			#menu ul li:hover, #menu ul li a:hover{
-				background-color: #08899e;
-				color: #ffff00;
-				font-weight: bold;
-				
-			}
-
-
-			#menu ul li a{
-				text-decoration: none;
-				color: #FFFFF0;
-				padding-top: 3px;
+.menu{
+	width: 100%;
+	height: 50px;
+	background-color: #e37222;
+	
 }
 
+.menu ul{
+	list-style: none;
+	position: relative:
+	
+}
+
+.menu ul li{
+	width: 108px;
+	float: left;
+
+}.menu a{
+	padding: 15px;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	background-color: #e37222;
+	color: #fff;
+	
+}
+
+.menu ul ul{
+	position: absolute;
+	visibility: hidden;
+	
+}
+
+.menu ul li:hover ul{
+	visibility: visible;
+}
+
+.menu a:hover{
+	background-color: #FFD700;
+	color: #800000;
+	font-weight: bold; 
+}
+
+.menu ul ul li{
+	float: none;
+	border-bottom: solid 1px black;
+
+}
+
+.menu ul ul li a{
+	background-color: #406db7;
+
+}
+
+label[for="bt_menu"]{
+	padding: 5px;
+	background-color: #222;
+	color: #fff;
+	text-align: center;
+	font-size: 30px;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+}
+
+#bt_menu{
+	display: none;
+}
+
+	label[for="bt_menu"]{
+	display: none;
+	}
+/*
+@media(max-width: 760px){
+	div.banner{
+	visibility: hidden;
+}
+
+
+	
+	.menu{
+		margin-top: 5px;
+		margin-left: -100%;
+		transition: all .4s;
+	}
+	
+	.menu ul li{
+		width: 100%;
+		float: none;
+	}
+	.menu ul ul{
+		position: static;
+		overflow: hidden;
+		max-height: 0;
+		transition: all .4s;
+	}
+	.menu ul li:hover ul{
+		height: auto;
+		max-height: 300px;
+	}
+	
+	#bt_menu{
+		display: none;
+	}
+	
+	label[for="bt_menu"]{
+	display: block;
+	}
+	
+	#bt_menu:checked ~ .menu{
+		margin-left: 0;
+	}
+	
+}
+	*/
+/* ---------------------------------- MENU PRINCIPAL FIM ----------- */
 
 h2{ 
   padding: 5px;
@@ -459,15 +535,69 @@ pre {
 		}
 
 /* ***************************************** Lista Exercícios ****************************** */
-#lista_baixar{
-					width:45%;
-					background-color:#f1f1ef;
-					padding:10px;
-					float:left;
-					margin-left:20px;
-					margin-bottom:10px;
-					--margin-top: 220px;
+
+div.header{
+		height: 40px;
+		background-color: inherit;
+		color: black;
+		padding: 10px 10px;
+		width: 100%;
+		border: none;
+		outline: none;
+		text-align: left;
+		cursor: pointer;
+		transition: 0.3s;
+		font-size: 12px;
+		font-weight: bold;
 				}
+
+div.linkn{
+	background-color: #406db7;
+  float: left;
+  height: 30px;
+  width: 33%;
+  color: white;
+  padding: 10px 10px;
+}
+
+				
+/* Estilo da div classe lista_baixar */
+div.lista_baixar{
+  height: 40px;
+  background-color: inherit;
+  color: black;
+  padding: 10px 10px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #406db7;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+div.lista_baixar div.links{
+  float: left;
+  height: 30px;
+  width: 33%;
+}
+
+
+
+/* Change background color of buttons on hover */
+.lista_baixar:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+div.lista_baixar div.active {
+  background-color: #ccc;
+}
+
+	
 
 /* ***************************************** Lista Videos ****************************** */
 
@@ -531,9 +661,13 @@ body {font-family: "Lato", sans-serif;}
 
 
 
-/* --------------------- botão salvar azul ----------------------- */
+/* --------------------- botão salvar azul COPIADOS DO BOOTSTRAP----------------------- */
 
-.btn{display:inline-block;font-weight:400;color:#212529;text-align:center;vertical-align:middle;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-color:transparent;border:1px solid transparent;padding:.375rem .75rem;font-size:1rem;line-height:1.5;border-radius:.25rem;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out}@media (prefers-reduced-motion:reduce){.btn{transition:none}}.btn:hover{color:#212529;text-decoration:none}.btn.focus,.btn:focus{outline:0;box-shadow:0 0 0 .2rem rgba(0,123,255,.25)}.btn.disabled,.btn:disabled{opacity:.65}a.btn.disabled,fieldset:disabled a.btn{pointer-events:none}
+.btn{display:inline-block;font-weight:400;color:#212529;text-align:center;vertical-align:middle;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-color:transparent;border:1px solid transparent;padding:.375rem .75rem;font-size:1rem;line-height:1.5;border-radius:.25rem;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out}@media (prefers-reduced-motion:reduce){.btn{transition:none}}
+.btn:hover{color:#212529;text-decoration:none}
+.btn.focus,.btn:focus{outline:0;box-shadow:0 0 0 .2rem rgba(0,123,255,.25)}
+.btn.disabled,.btn:disabled{opacity:.65}
+a.btn.disabled,fieldset:disabled a.btn{pointer-events:none}
 
 .btn-primary{color:#fff;background-color:#007bff;border-color:#007bff}
 .btn-primary:hover{color:#fff;background-color:#0069d9;border-color:#0062cc}
@@ -542,3 +676,9 @@ body {font-family: "Lato", sans-serif;}
 .btn-primary:not(:disabled):not(.disabled).active,.btn-primary:not(:disabled):not(.disabled):active,.show>
 .btn-primary.dropdown-toggle{color:#fff;background-color:#0062cc;border-color:#005cbf}
 .btn-primary:not(:disabled):not(.disabled).active:focus,.btn-primary:not(:disabled):not(.disabled):active:focus,.show>
+
+.btn-primary.dropdown-toggle{color:#fff;background-color:#0062cc;border-color:#005cbf}
+.btn-primary.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(38,143,255,.5)}
+.dropdown-menu{position:absolute;top:100%;left:0;z-index:1000;display:none;float:left;min-width:10rem;padding:.5rem 0;margin:.125rem 0 0;font-size:1rem;color:#212529;text-align:left;list-style:none;background-color:#fff;background-clip:padding-box;border:1px solid rgba(0,0,0,.15);border-radius:.25rem}
+
+
